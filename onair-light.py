@@ -1,5 +1,5 @@
 
-#import libraries for GPIO board and utils etc
+#import libraries for GPIO pins and utils etc
 import RPi.GPIO as GPIO
 import time
 import psutil
@@ -14,8 +14,9 @@ GPIO.setmode(GPIO.BOARD)
 #GPIO setup for pin 16
 GPIO.setup(16,GPIO.IN)
 
-#while OFF AIR 
+#use TRY to create FINALLY action 
 try:
+	#while OFF AIR - indefinite loop
 	while True:
 		if GPIO.input(16) == 0:
 			#test to see if fbi (image viewer) is running
