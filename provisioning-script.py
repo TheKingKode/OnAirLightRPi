@@ -1,4 +1,4 @@
-# Print out welcom to provisioning script.  Do you want to provision this now?
+# Print out welcome to provisioning script.  Do you want to provision this now?
 
 #if yes, ask for IP address
     #ask for netmask
@@ -8,10 +8,14 @@
         #write out /etc/dhcpcd.conf with new ip info
             #ask do you want to test the ip or reboot in onair mode?
                 #if yes, reboot with test script
-                #if no, reboot with onair mode 
+                #if no, reboot with onair mode
 
-    #if no ask if you want to activate onair-light mode
+#if no ask if you want to activate onair-light mode
 
-        #if yes, set startup script to be onair-light.py
+    #if yes, set startup script to be onair-light.py
+        #set startup script to ONAIR mode 
+        #State the PI will now reboot - pause 3 secs
+        #Reboot PI
 
-            #if no exit to command line
+        #if no, say 'exiting to command line'
+        #exit to command line
